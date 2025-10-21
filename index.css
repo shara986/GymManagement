@@ -1,0 +1,267 @@
+/* ==============================
+   🌟 SIGN UP PAGE STYLES
+============================== */
+
+/* Full page background */
+* body{
+    padding: 0;
+    margin:0;
+}
+.auth-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('invictus go _ Almaty _ gym zone _ 2022 __ Behance.jpeg') center/cover no-repeat;
+    /* ↑ Replace with your home page background image path */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Glassmorphism sign-up box */
+.auth-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Illustration */
+.illustration {
+    margin-bottom: 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings */
+.auth-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.auth-container p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+/* Form */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00bcd4 ;
+}
+
+/* Button */
+.btn-primary.full-width {
+    width: 100%;
+    padding: 12px;
+    background: #00bcd4;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary.full-width:hover {
+    background: #0097a7;
+    transform: translateY(-2px);
+}
+
+/* Switch link */
+.auth-switch {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.auth-switch a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Error message */
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 50px 50px 20px 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-about h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-about h3 span {
+    color: #f05a28;
+}
+
+.footer-about p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer Links */
+.footer-links h4,
+.footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f05a28;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #f05a28;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-container {
+        margin: 0 15px;
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .auth-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .btn-primary.full-width {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+
+    .illustration svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}

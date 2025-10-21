@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitPro - Notifications</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Fit<span>Pro</span></div>
+            <div class="menu-item">
+                <i class="fas fa-tachometer-alt"></i> <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-home"></i> <a href="home.html">Home</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-info-circle"></i> <a href="about.html">About</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-envelope"></i> <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-item" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> <a href="login.html">Log out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header creative-header">
+                <h1>Notifications</h1>
+                <p>View your latest notifications</p>
+                <div class="user-info">
+                    <img id="user-avatar" src="" alt="User Avatar" />
+                    <span id="user-name"></span>
+                </div>
+                
+            </div>
+
+            <section class="content-section active">
+                <div class="notifications-section">
+                    <h3>Notifications</h3>
+                    <div class="notifications-list" id="notifications-list">
+                        <!-- Notifications will be loaded here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

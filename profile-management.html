@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitPro - Profile Management</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="profile-management.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Fit<span>Pro</span></div>
+            <div class="menu-item">
+                <i class="fas fa-tachometer-alt"></i> <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-home"></i> <a href="home.html">Home</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-info-circle"></i> <a href="about.html">About</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-envelope"></i> <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-item" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> <a href="login.html">Log out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header creative-header">
+                <h1>Profile Management</h1>
+                <p>Manage your fitness profile</p>
+                <div class="user-info">
+                    <img id="user-avatar" src="" alt="User Avatar" />
+                    <span id="user-name"></span>
+                </div>
+                
+            </div>
+
+            <section class="content-section active">
+                <div class="profile-management">
+                    <h3>Profile Management</h3>
+                    <div class="profile-form">
+                        <div id="profile-message" class="message">
+                            <span id="message-text"></span>
+                            <button id="close-message-btn" class="close-btn">&times;</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Height (cm):</label>
+                            <input type="number" id="height" placeholder="Enter height">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg):</label>
+                            <input type="number" id="weight" placeholder="Enter weight">
+                        </div>
+                        <div class="form-group">
+                            <label for="fitness-goal">Fitness Goal:</label>
+                            <select id="fitness-goal">
+                                <option value="">Select goal</option>
+                                <option value="Lose Weight">Lose Weight</option>
+                                <option value="Gain Muscle">Gain Muscle</option>
+                                <option value="Maintain Health">Maintain Health</option>
+                                <option value="Increase Stamina">Increase Stamina</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="workout-types">Preferred Workout Types:</label>
+                            <input type="text" id="workout-types" placeholder="e.g., Cardio, Strength, Yoga">
+                        </div>
+                        <div class="form-group">
+                            <label for="medical-conditions">Medical Conditions:</label>
+                            <textarea id="medical-conditions" placeholder="Any medical conditions or allergies"></textarea>
+                        </div>
+                        <button id="save-profile-btn" class="btn-primary">Save Profile</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="profile-management.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitPro - Fitness Test & Plans</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Fit<span>Pro</span></div>
+            <div class="menu-item">
+                <i class="fas fa-tachometer-alt"></i> <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-home"></i> <a href="home.html">Home</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-info-circle"></i> <a href="about.html">About</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-envelope"></i> <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-item" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> <a href="login.html">Log out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header creative-header">
+                <h1><i class="fas fa-dumbbell"></i> Fitness Test & Plans</h1>
+                <p>Unlock your potential with our AI-powered personalized fitness assessment</p>
+                <div class="header-features">
+                    <div class="feature-item">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Analysis</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>5-Min Test</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-star"></i>
+                        <span>Custom Plans</span>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <img id="user-avatar" src="" alt="User Avatar" />
+                    <span id="user-name"></span>
+                </div>
+
+            </div>
+
+            <section class="content-section active">
+                <div class="fitness-planner">
+                    <h3><i class="fas fa-rocket"></i> Get Your Personalized Fitness Plan</h3>
+                    <p>Take our quick 5-question assessment to unlock a tailored fitness journey. Our advanced AI analyzes your lifestyle and goals to create the perfect diet and workout plan just for you!</p>
+
+                    <div class="info-cards animated-cards">
+                        <div class="info-card card-hover">
+                            <i class="fas fa-utensils"></i>
+                            <h3><i class="fas fa-leaf"></i> Smart Nutrition</h3>
+                            <p>AI-crafted meal plans that adapt to your taste, health needs, and dietary preferences for optimal results.</p>
+                        </div>
+                        <div class="info-card card-hover">
+                            <i class="fas fa-dumbbell"></i>
+                            <h3><i class="fas fa-fire"></i> Dynamic Workouts</h3>
+                            <p>Progressive exercise routines that evolve with your fitness level and keep you motivated.</p>
+                        </div>
+                        <div class="info-card card-hover">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3><i class="fas fa-brain"></i> Expert Insights</h3>
+                            <p>Proven strategies and tips from fitness experts to accelerate your transformation.</p>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div class="progress-indicator">
+                        <div class="progress-step">1</div>
+                        <div class="progress-step">2</div>
+                        <div class="progress-step">3</div>
+                        <div class="progress-step">4</div>
+                        <div class="progress-step">5</div>
+                    </div>
+
+                    <div id="question-container"></div>
+                    <div id="results-page" style="display: none;">
+                        <div class="results-header">
+                            <h2><i class="fas fa-trophy"></i> Your Custom Fitness Blueprint</h2>
+                            <p>Congratulations! Based on your responses, here's your personalized plan to achieve your goals.</p>
+                        </div>
+                        <div class="results-cards">
+                            <div class="result-card">
+                                <h2><i class="fas fa-utensils"></i> <i class="fas fa-leaf"></i> Your Personalized Diet Plan</h2>
+                                <p id="diet-text"></p>
+                                <div class="result-tips">
+                                    <i class="fas fa-info-circle"></i> Track your meals in the Diet Tracking section for better results.
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <h2><i class="fas fa-dumbbell"></i> <i class="fas fa-fire"></i> Your Workout Plan</h2>
+                                <p id="workout-text"></p>
+                                <div class="result-tips">
+                                    <i class="fas fa-calendar-check"></i> Set reminders in Workout Reminders to stay consistent.
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <h2><i class="fas fa-lightbulb"></i> <i class="fas fa-brain"></i> Expert Tips & Strategies</h2>
+                                <p id="tips-text"></p>
+                                <div class="result-tips">
+                                    <i class="fas fa-chart-line"></i> Monitor your progress in the Progress Tracker section.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="results-actions">
+                            <button id="restart-btn" class="btn-secondary"><i class="fas fa-redo"></i> Retake Test</button>
+                            <button class="btn-primary" onclick="window.location.href='dashboard.html'"><i class="fas fa-tachometer-alt"></i> Go to Dashboard</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="fitness-planner.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitPro - Workout Reminders</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Fit<span>Pro</span></div>
+            <div class="menu-item">
+                <i class="fas fa-tachometer-alt"></i> <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-home"></i> <a href="home.html">Home</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-info-circle"></i> <a href="about.html">About</a>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-envelope"></i> <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-item" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> <a href="login.html">Log out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header creative-header">
+                <h1>Workout Reminders</h1>
+                <p>Set and manage your workout reminders</p>
+                <div class="user-info">
+                    <img id="user-avatar" src="" alt="User Avatar" />
+                    <span id="user-name"></span>
+                </div>
+                
+            </div>
+
+            <section class="content-section active">
+                <div class="workout-reminders">
+                    <h3>Workout Reminders</h3>
+                    <div class="reminder-form">
+                        <div class="form-group">
+                            <label for="reminder-date">Date:</label>
+                            <input type="date" id="reminder-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="reminder-time">Time:</label>
+                            <input type="time" id="reminder-time">
+                        </div>
+                        <div class="form-group">
+                            <label for="reminder-workout">Workout Type:</label>
+                            <input type="text" id="reminder-workout" placeholder="e.g., Cardio, Strength">
+                        </div>
+                        <div class="form-group">
+                            <label for="reminder-notes">Notes:</label>
+                            <textarea id="reminder-notes" placeholder="Additional notes"></textarea>
+                        </div>
+                        <button id="add-reminder-btn" class="btn-primary">Add Reminder</button>
+                    </div>
+                    <div class="reminders-list" id="reminders-list">
+                        <!-- Reminders will be loaded here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="workout-reminders.js"></script>
+
+    <!-- Test ringtone button for demonstration -->
+    <button id="test-ringtone-btn" style="position: fixed; bottom: 20px; right: 20px; background: #d86939; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Test Ringtone</button>
+    <script>
+        document.getElementById('test-ringtone-btn').addEventListener('click', () => {
+            const ringtone = new Audio('workout-ringtone.mp3');
+            ringtone.volume = 0.5;
+            ringtone.play().catch(e => console.log('Audio play failed:', e));
+        });
+    </script>
+</body>
+
+</html>
